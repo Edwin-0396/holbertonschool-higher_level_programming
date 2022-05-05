@@ -1,5 +1,5 @@
 # 0x02. Python - import & modules
 ## Tasks
-* [General info](#general-info)
+* [0. Import a simple function from a simple file](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
