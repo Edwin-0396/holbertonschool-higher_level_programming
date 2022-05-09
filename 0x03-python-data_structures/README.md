@@ -1,0 +1,16 @@
+# 0x03. Python - Data Structures: Lists, Tuples
+## Tasks
+* [0. Print a list of integers](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/0-add.py)
+* [1. Secure access to an element in a list](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/1-calculation.py)
+* [2. Replace element](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/2-args.py)
+* [3. Print a list of integers... in reverse!](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/3-infinite_add.py)
+* [4. Replace in a copy](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/4-hidden_discovery.py)
+* [5. Can you C me now?](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [6. Lists of lists = Matrix](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [7. Tuples addition](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [8. More returns!](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [9. Find the max](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [10. Only by 2](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [11. Delete at](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [12. Switch](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
+* [13. Linked list palindrome](https://github.com/Edwin-0396/holbertonschool-higher_level_programming/blob/master/0x02-python-import_modules/5-variable_load.py)
