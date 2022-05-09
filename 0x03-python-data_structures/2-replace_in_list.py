@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+from re import M
+
+
+def replace_in_list(my_list, idx, element):
+	if idx < 0:
+		return my_list
+	if idx > len(my_list):
+		return my_list
+	
+	for x in range(len(my_list)):
+		if x == idx:
+			my_list[x] = element
+			return(my_list)
