@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Square class definition"""
 
-from pyrsistent import T
-
 
 class Square:
     """class Square

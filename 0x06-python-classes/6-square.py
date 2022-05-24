@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
 """Module that creates a class named square"""
-
-from re import U
 
 
 class Square:
