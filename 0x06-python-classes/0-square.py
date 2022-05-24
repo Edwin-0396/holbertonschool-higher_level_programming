@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module creates an empty class"""
+"""This module creates a class Square"""
 
 
 class Square:
