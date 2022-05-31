@@ -1,0 +1,78 @@
+===============================
+4-print_square
+===============================
+
+This one function that prints My name is <first name> <last name>
+``print_square()``.
+
+	>>> print_square = __import__('4-print_square').print_square
+
+	Prints a square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+
+	>>> print_square(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+	>>> print_square(1)
+	#
+
+	>>> print_square(0)
+
+	Raise exception if missing argument
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
+
+	Raise exception if size is not an int
+	>>> print_square("Foo")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+	Raise exception if size is a float
+	>>> print_square(1.5)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(10.0)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	>>> print_square(float('nan'))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+
+	Raise exception if size is a float and less than zero
+	>>> print_square(-1.5)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+
+	Raise exception if printing square with negative size
+	>>> print_square(-1)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+	Test for size of infinity
+	>>> print_square(float('inf'))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+	Test for size of nan
+	>>> print_square(float('nan'))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
