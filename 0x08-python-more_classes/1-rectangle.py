@@ -5,8 +5,6 @@
 
 class Rectangle:
     """Class that defines a rectangle"""
-    number_of_instances = 0
-    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """Class instance"""
@@ -28,7 +26,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
 
         self.__width = value
-        
+
     @property
     def height(self):
         """class property"""
