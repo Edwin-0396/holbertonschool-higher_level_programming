@@ -2,6 +2,7 @@
 
 """class Rectangle that defines a rectangle by: (based on 0-rectangle.py"""
 
+
 class Rectangle:
     """Class that defines a rectangle"""
     number_of_instances = 0
