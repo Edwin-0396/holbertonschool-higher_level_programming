@@ -2,11 +2,6 @@
 
 """class Rectangle that defines a rectangle by: (based on 0-rectangle.py"""
 
-
-from ast import Str
-from traceback import print_stack
-
-
 class Rectangle:
     """Class that defines a rectangle"""
     number_of_instances = 0
