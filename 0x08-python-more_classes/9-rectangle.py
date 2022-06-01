@@ -10,8 +10,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Class instance"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -93,8 +93,4 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """Class method for a new instance"""
-        if type(size) is not int:
-            raise TypeError("height must be an integer")
-        if size < 0:
-            raise ValueError("height must be >= 0")
         return cls(size, size)
