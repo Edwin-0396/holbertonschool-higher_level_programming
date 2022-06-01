@@ -66,7 +66,6 @@ class Rectangle:
         str_draw = str_draw[0:-1]
         return str_draw
 
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """static method to check which instance area is greater"""
