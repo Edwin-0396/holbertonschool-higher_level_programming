@@ -69,9 +69,8 @@ class Rectangle:
     def __repr__(self) -> str:
         """Print a representation of the class"""
         str_draw = rep = 'Rectangle(' + str(self.width) + \
-            ',' + str(self.height) + ')'
+            ', ' + str(self.height) + ')'
         return str_draw
-
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
