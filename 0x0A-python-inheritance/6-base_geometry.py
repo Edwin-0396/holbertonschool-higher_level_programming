@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""Module to create an empty class"""
+"""Module to create a class named BaseGeometry"""
 
 
 class BaseGeometry():
-
-    def area(self):
-        raise Exception("area() is not implemented")
+	"""An class named BaseGeometry
+	Attributes:
+	attr1(area): Raises an exception
+	"""
+	def area(self):
+		raise Exception("area() is not implemented")
