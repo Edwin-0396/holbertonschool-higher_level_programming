@@ -4,10 +4,10 @@
 
 
 def read_file(filename=""):
-    """Reads a text file and prints it to stdout
-Args:
-filename (str): Filename
-"""
-    with open(filename, encoding="utf-8") as f:
-        read_data = f.read()
-    print(read_data)
+	"""Reads a text file and prints it to stdout
+	Args:
+	filename (str): Filename
+	"""
+	with open(filename, encoding="utf-8") as f:
+		for line in file:
+			print(line, end="")
