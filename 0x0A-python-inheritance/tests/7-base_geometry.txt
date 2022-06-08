@@ -1,0 +1,65 @@
+================================
+	Test of 7 task
+================================
+
+
+This function evalue the value is a int, otherwise
+this function will raise a TypeError with his respective message
+
+
+To see how it works let's import the function from his module first:
+====================================================================
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+And now we check cases where it works:
+======================================
+
+- Integrers
+
+	>>> bg = BaseGeometry()
+	
+	>>> bg.integer_validator("my_int", 12)
+
+	>>> bg.integer_validator("width", 89)
+
+	>>> bg.integer_validator("width", "value")
+	Traceback (most recent call last):
+	    ...
+	TypeError: width must be an integer
+
+	>>> bg.integer_validator("width", (2, 3))
+	Traceback (most recent call last):
+	    ...
+	TypeError: width must be an integer
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	    ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("width")
+	Traceback (most recent call last):
+	    ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator("width", -3)
+	Traceback (most recent call last):
+	    ...
+	ValueError: width must be greater than 0
+
+	>>> bg.integer_validator("width", 0)
+	Traceback (most recent call last):
+	    ...
+	ValueError: width must be greater than 0
+
+	>>> bg.integer_validator("width", None)
+	Traceback (most recent call last):
+	    ...
+	TypeError: width must be an integer
+
+	>>> bg.integer_validator("width", 3.3)
+	Traceback (most recent call last):
+	    ...
+	TypeError: width must be an integer
