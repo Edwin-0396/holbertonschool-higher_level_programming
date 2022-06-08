@@ -63,3 +63,19 @@ And now we check cases where it works:
 	Traceback (most recent call last):
 	    ...
 	TypeError: width must be an integer
+
+	>>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.__doc__
+	>>> len(sizeOfmod) > 1
+	True
+
+	>>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	>>> len(sizeOfmod) > 1
+	True
+
+	>>> sizeOfmod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+	>>> len(sizeOfmod) > 1
+	True
+
+	>>> sizeOfmod = __import__("7-base_geometry").__doc__
+	>>> len(sizeOfmod) > 1
+	True

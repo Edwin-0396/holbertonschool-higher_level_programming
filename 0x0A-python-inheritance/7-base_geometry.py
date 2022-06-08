@@ -3,18 +3,19 @@
 
 
 class BaseGeometry():
-	"""An class named BaseGeometry
-	Attributes:
-	attr1(area): Raises an exception
-	"""
-	def area(self):
-		"""raises an exception"""
-		raise Exception("area() is not implemented")
+    """An class named BaseGeometry
+    Attributes:
+    attr1(area): Raises an exception
+    """
 
-	def integer_validator(self, name, value):
-		"""validates input"""
-		if not isinstance(value, int):
-			raise TypeError(f"{name} must be an integer")
+    def area(self):
+        """raises an exception"""
+        raise Exception("area() is not implemented")
 
-		if value <= 0:
-			raise ValueError(f"{name} must be greater than 0")
+    def integer_validator(self, name, value):
+        """validates input"""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
