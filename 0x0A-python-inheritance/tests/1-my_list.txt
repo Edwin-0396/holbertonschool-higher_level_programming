@@ -40,4 +40,4 @@
 	>>> my_list.print_sorted()
 	Traceback (most recent call last):
 	...
-	TypeError: unorderable types: int() < str()
+	TypeError: '<' not supported between instances of 'int' and 'str'
