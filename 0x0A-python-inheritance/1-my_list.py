@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"Module to inherits from a class"
+"A module that defines a class named MyList"
 
 
-class Mylist(list):
-    """A class named Mylist
+class MyList(list):
+    """A class named MyList
     Attributes:
-    attr1(print_sorted): print sorted list
+    attr1(print_sorted): prints sorted list
     """
-
     def print_sorted(self):
-        """Print instance"""
+        """Prints instance"""
         print(sorted(self))
