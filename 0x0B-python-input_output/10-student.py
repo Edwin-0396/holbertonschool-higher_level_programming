@@ -1,23 +1,21 @@
 #!/usr/bin/python3
-
-"""Module that defines a class student"""
+"""This modle creates a class named Student"""
 
 
 class Student:
-    """"Class named Student
-
+    """A class named Student
     Attributes:
-    first name: first name of student
-    last name: last name of student
-    age: age of student
+    attr1(first_name): first name of student
+    attr2(last_name): last name of student
+    attr3(age): age of student
     """
 
     def __init__(self, first_name, last_name, age):
-        """Instance attributes"""
+        """Initializes an instance"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self):
-        """Dictionary represetation of student"""
+        """Retrieves dictionary representation of student"""
         return self.__dict__
