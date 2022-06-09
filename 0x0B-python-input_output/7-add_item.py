@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Adds python args to a list and save them"""
+
 from os import path
 from sys import argv
 
