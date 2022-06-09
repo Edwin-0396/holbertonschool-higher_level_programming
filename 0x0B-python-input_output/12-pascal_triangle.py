@@ -4,6 +4,10 @@
 
 
 def pascal_triangle(n):
+    """Function to print the pascal triangle
+    Args:
+    n: number of rows
+    """
     if n <= 0:
         return []
     pascal = []
