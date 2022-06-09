@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
-"""Adds python args to a list and save them"""
+"""This module creates a script that adds args to Python list and saves them"""
 
 from os import path
 from sys import argv
-
 save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file
 load_from_json_file = __import__(
     '6-load_from_json_file.py').load_from_json_file
