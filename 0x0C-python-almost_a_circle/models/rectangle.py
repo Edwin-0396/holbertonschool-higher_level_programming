@@ -54,9 +54,9 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Returns the informal representation of the object"""
-        return f"[Rectangle]({self.id}) {self.x}/\
-{self.y} - {self.width}/{self.height}"
+        """Returns a string representation of a Rectangle"""
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
+ - {self.__width}/{self.__height}")
 
     @property
     def width(self):
