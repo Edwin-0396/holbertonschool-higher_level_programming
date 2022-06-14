@@ -2,6 +2,7 @@
 
 """Models base"""
 import json
+from os import path
 
 
 class Base:
@@ -60,13 +61,14 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """loads a list of instances from a json file"""
-        listv = []
-        with open(cls.__name__ + ".json", "r", encoding='utf-8') as f:
-            listv = cls.from_json_string(f.read())
-        listv2 = []
-        for i in listv:
-            if type(i) is dict:
-                listv2.append(cls.create(**i))
-            else:
-                listv2.append(i)
-        return listv2
+        if path.exists(cls.__name__ + ".json") is False:
+            return []
+        with open(cls.__name__ + ".json", "r",  encoding='utf-8') as file:
+            listofinstances = []
+            objectlist = cls.from_json_string(file.read())
+            for dict in objectlist:
+                objectdict = {}
+                for key, value in dict.items():
+                    objectdict[key] = value
+                listofinstances.append(cls.create(**objectdict))
+            return listofinstances
