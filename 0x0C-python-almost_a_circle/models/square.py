@@ -51,5 +51,10 @@ class Square(Rectangle):
                 setattr(self, tupla[i], args[i])
 
     def to_dictionary(self):
-        """Returns the dictionary representation of the Square"""
-        return vars(self)
+        """return format of dictionary"""
+        return {
+            'id': self.id,
+            'x': self.x,
+            'size': self.size,
+            'y': self.y
+        }
