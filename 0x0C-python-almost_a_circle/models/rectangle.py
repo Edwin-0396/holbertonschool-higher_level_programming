@@ -119,5 +119,11 @@ class Rectangle(Base):
                 setattr(self, tupla[i], args[i])
 
     def to_dictionary(self):
-        """Returns the dictionary representation of the Rectangle"""
-        return vars(self)
+        """return a dictionary"""
+        return {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        }
