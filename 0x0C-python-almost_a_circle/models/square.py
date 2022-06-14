@@ -4,37 +4,52 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
-	def __init__(self, size, x=0, y=0, id=None):
-		super().__init__(size, size, x, y, id)
+    """A class named Square
+    Attributes:
+    attr1(id): id of object
+    attr2(width): square width
+    attr3(height): square height
+    attr4(x): number of spaces before square
+    attr5(y): number of spaces before square
+    """
 
-	def __str__(self):
-		return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+    def __init__(self, size, x=0, y=0, id=None):
+        """Initializes instance of Square class"""
+        super().__init__(size, size, x, y, id)
 
-	@property
-	def size(self):
-		return self.width
-	
-	@size.setter
-	def size(self, value):
-		self.width = value
-		self.height = value
+    def __str__(self):
+        """Returns string representation of Square class"""
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
-	def update(self, *args, **kwargs):
-		if len(args) == 0:
-			for key in kwargs:
-				setattr(self, key, kwargs[key]) 
+    @property
+    def size(self):
+        """Returns the size of the object"""
+        return self.width
 
-		else:
-			tupla = [
-				"id",
-				"size",
-				"x",
-				"y"
-			]
-			for i in range(len(args)):
-				setattr(self, tupla[i], args[i])
-	
-	def to_dictionary(self):
-		return vars(self)
+    @size.setter
+    def size(self, value):
+        """Returns the size of the object"""
+        self.width = value
+        self.height = value
 
+    def update(self, *args, **kwargs):
+        """Update attributes"""
+        if len(args) == 0:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
+
+        else:
+            tupla = [
+                "id",
+                "size",
+                "x",
+                "y"
+            ]
+            for i in range(len(args)):
+                setattr(self, tupla[i], args[i])
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of the Square"""
+        return vars(self)
