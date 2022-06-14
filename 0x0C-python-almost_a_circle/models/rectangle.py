@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 
 """module for rectangle class"""
-
-from abc import abstractstaticmethod
-from termios import VSTART
 from models.base import Base
 
 
@@ -101,4 +98,3 @@ class Rectangle(Base):
 
 	def to_dictionary(self):
 		return vars(self)
-
