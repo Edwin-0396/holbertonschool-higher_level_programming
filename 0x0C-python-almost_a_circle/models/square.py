@@ -36,4 +36,5 @@ class Square(Rectangle):
 				setattr(self, tupla[i], args[i])
 	
 	def to_dictionary(self):
-		
+		return vars(self)
+

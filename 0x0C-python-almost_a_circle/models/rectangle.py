@@ -99,3 +99,6 @@ class Rectangle(Base):
 			for i in range(len(args)):
 				setattr(self, tupla[i], args[i])
 
+	def to_dictionary(self):
+		return vars(self)
+
