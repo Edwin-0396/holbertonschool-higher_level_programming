@@ -20,3 +20,20 @@ class Square(Rectangle):
 		self.width = value
 		self.height = value
 
+	def update(self, *args, **kwargs):
+		if len(args) == 0:
+			for key in kwargs:
+				setattr(self, key, kwargs[key]) 
+
+		else:
+			tupla = [
+				"id",
+				"size",
+				"x",
+				"y"
+			]
+			for i in range(len(args)):
+				setattr(self, tupla[i], args[i])
+	
+	def to_dictionary(self):
+		
