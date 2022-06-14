@@ -5,118 +5,119 @@ from models.base import Base
 
 
 class Rectangle(Base):
-	"""A class named Rectangle
-	Attributes:
-	attr1(id): id of object
-	attr2(width): rectangle width
-	attr3(height): rectangle height
-	attr4(x): number of spaces before rectangle
-	attr5(y): number of newlines before rectangle
-	"""
-	def __init__(self, width, height, x=0, y=0, id=None):
-		"""Initializes instance of Rectangle class"""
-		self.staticfunc(width, "width")
-		self.staticfunc(height, "height")
-		self.staticfunc(x, "x")
-		self.staticfunc(y, "y")
-		self.__width = width
-		self.__height = height
-		self.__x = x
-		self.__y = y
-		super().__init__(id)
+    """A class named Rectangle
+    Attributes:
+    attr1(id): id of object
+    attr2(width): rectangle width
+    attr3(height): rectangle height
+    attr4(x): number of spaces before rectangle
+    attr5(y): number of newlines before rectangle
+    """
 
-	@staticmethod
-	def staticfunc(value, name_met):
-		"""staticfunc to manage the errors"""
-		if type(value) is not int:
-			raise TypeError(f"{name_met} must be an integer")
-		if value <= 0 and name_met in ("width", "height"):
-			raise ValueError(f"{name_met} must be > 0")
-		if value < 0 and name_met in ("x", "y"):
-			raise ValueError(f"{name_met} must be >= 0")
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializes instance of Rectangle class"""
+        self.staticfunc(width, "width")
+        self.staticfunc(height, "height")
+        self.staticfunc(x, "x")
+        self.staticfunc(y, "y")
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
+        super().__init__(id)
 
-	def area(self):
-		"""Returns the area value of the Rectangle instance"""
-		return self.__width * self.__height
+    @staticmethod
+    def staticfunc(value, name_met):
+        """staticfunc to manage the errors"""
+        if type(value) is not int:
+            raise TypeError(f"{name_met} must be an integer")
+        if value <= 0 and name_met in ("width", "height"):
+            raise ValueError(f"{name_met} must be > 0")
+        if value < 0 and name_met in ("x", "y"):
+            raise ValueError(f"{name_met} must be >= 0")
 
-	def display(self):
-		"""Prints in stdout the instance with the character #"""
-		if self.__y > 0:
-			for i in range(self.__y):
-				print()
+    def area(self):
+        """Returns the area value of the Rectangle instance"""
+        return self.__width * self.__height
 
-		for row in range(self.__height):
-			if self.__x > 0:
-				print(" " * self.__x, end="")
-			for column in range(self.__width):
-				print("#", end="")
-			print()
+    def display(self):
+        """Prints in stdout the instance with the character #"""
+        if self.__y > 0:
+            for i in range(self.__y):
+                print()
 
-	def __str__(self):
-		"""Returns the informal representation of the object"""
-		return f"[Rectangle] ({self.id}) {self.x}/\
-	{self.y} - {self.width}/{self.height}"
+        for row in range(self.__height):
+            if self.__x > 0:
+                print(" " * self.__x, end="")
+            for column in range(self.__width):
+                print("#", end="")
+            print()
 
-	@property
-	def width(self):
-		"""Returns width of instance"""
-		return self.__width
+    def __str__(self):
+        """Returns the informal representation of the object"""
+        return f"[Rectangle]({self.id}) {self.x}/\
+{self.y} - {self.width}/{self.height}"
 
-	@width.setter
-	def width(self, value):
-		"""Sets width of class instance"""
-		self.staticfunc(value, "width")
-		self.__width = value
+    @property
+    def width(self):
+        """Returns width of instance"""
+        return self.__width
 
-	@property
-	def height(self):
-		"""Returns height of instance"""
-		return self.__height
+    @width.setter
+    def width(self, value):
+        """Sets width of class instance"""
+        self.staticfunc(value, "width")
+        self.__width = value
 
-	@height.setter
-	def height(self, value):
-		"""Sets height of class instance"""
-		self.staticfunc(value, "height")
-		self.__height = value
+    @property
+    def height(self):
+        """Returns height of instance"""
+        return self.__height
 
-	@property
-	def x(self):
-		return self.__x
+    @height.setter
+    def height(self, value):
+        """Sets height of class instance"""
+        self.staticfunc(value, "height")
+        self.__height = value
 
-	@x.setter
-	def x(self, value):
-		"""Returns x of instance"""
-		self.staticfunc(value, "x")
-		self.__x = value
+    @property
+    def x(self):
+        return self.__x
 
-	@property
-	def y(self):
-		"""Returns y of instance"""
-		return self.__y
+    @x.setter
+    def x(self, value):
+        """Returns x of instance"""
+        self.staticfunc(value, "x")
+        self.__x = value
 
-	@y.setter
-	def y(self, value):
-		"""Sets y of class instance"""
-		self.staticfunc(value, "y")
-		self.__y = value
+    @property
+    def y(self):
+        """Returns y of instance"""
+        return self.__y
 
-	def update(self, *args, **kwargs):
-		"""Updates attributes"""
-		if len(args) == 0:
-			for key in kwargs:
-				setattr(self, key, kwargs[key])
+    @y.setter
+    def y(self, value):
+        """Sets y of class instance"""
+        self.staticfunc(value, "y")
+        self.__y = value
 
-		else:
-			tupla = [
-				"id",
-				"width",
-				"height",
-				"x",
-				"y"
-			]
-			for i in range(len(args)):
-				setattr(self, tupla[i], args[i])
+    def update(self, *args, **kwargs):
+        """Updates attributes"""
+        if len(args) == 0:
+            for key in kwargs:
+                setattr(self, key, kwargs[key])
 
-	def to_dictionary(self):
-		"""Returns the dictionary representation of the Rectangle"""
-		return vars(self)
+        else:
+            tupla = [
+                "id",
+                "width",
+                "height",
+                "x",
+                "y"
+            ]
+            for i in range(len(args)):
+                setattr(self, tupla[i], args[i])
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of the Rectangle"""
+        return vars(self)
