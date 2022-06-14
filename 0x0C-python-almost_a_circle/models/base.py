@@ -48,12 +48,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """creates an instance based on a dictionary"""
+        """create a dummy instance"""
         if cls.__name__ == "Rectangle":
-            instance = cls(4, 6, 2)
+            instance = cls(6, 2)
 
         if cls.__name__ == "Square":
-            instance = cls(4, 6)
+            instance = cls(4)
         instance.update(**dictionary)
         return instance
 
