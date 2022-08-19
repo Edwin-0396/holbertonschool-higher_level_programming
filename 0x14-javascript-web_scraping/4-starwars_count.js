@@ -3,7 +3,7 @@
 const axios = require('axios').default;
 const URL = process.argv[2];
 
-async function getCharacter () {
+/* async function getCharacter () {
   try {
     const response = await axios.get(URL);
     const data = response.data.results;
@@ -26,3 +26,20 @@ async function getCharacter () {
 }
 
 getCharacter();
+*/
+axios.get(URL)
+  .then((response) => {
+    const films = response.data.results;
+    let appearences = 0;
+    for (const film of films) {
+      for (const character of film.characters) {
+        if (character.includes('/18/')) {
+          appearences++;
+        }
+      }
+    }
+    console.log(appearences);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
