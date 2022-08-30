@@ -21,7 +21,7 @@ WHERE states.name = '{}' \
 ORDER BY cities.id ASC".format(st[0]))
     myresult = mycursor.fetchall()
     for x in range(len(myresult)):
-        if x == (len(myresult) - 1):
-            print(myresult[x][0])
-        else:
+        if x < (len(myresult) - 1):
             print(myresult[x][0], end=", ")
+        else:
+            print(myresult[x][0])
