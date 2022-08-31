@@ -16,12 +16,9 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    for state in session.query(State).all():
-        if sys.argv[4] == state.name:
-            print("{}".format(state.id))
-            search = True
-    if search is False:
-        print("Not found")
+    state = State(name="Louisiana")
+
+    session.add(state)
+    session.commit()
+    print(state.id)
     session.close()
-
-
