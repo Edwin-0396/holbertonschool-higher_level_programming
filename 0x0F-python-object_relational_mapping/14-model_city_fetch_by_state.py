@@ -5,6 +5,7 @@
 
 if __name__ == "__main__":
     from model_state import Base, State
+    from model_city import City
     from sqlalchemy import create_engine
     from sqlalchemy.orm import Session
     import sys
@@ -15,7 +16,6 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    state = session.query(State).filter(State.id == 2).first()
-    state.name = "New Mexico"
-    session.commit()
-    session.close()
+    for city, state in session.query(City, State).\
+            filter(City.state_id == State.id).order_by(City.id):
+        print(f"{state.name}: ({city.id}) {city.name}")

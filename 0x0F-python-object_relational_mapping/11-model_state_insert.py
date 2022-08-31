@@ -8,7 +8,6 @@ if __name__ == "__main__":
     from sqlalchemy import create_engine
     from sqlalchemy.orm import Session
     import sys
-    search = False
 
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
