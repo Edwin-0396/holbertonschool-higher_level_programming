@@ -20,8 +20,9 @@ FROM cities JOIN states ON cities.state_id = states.id \
 WHERE states.name = '{}' \
 ORDER BY cities.id ASC".format(st[0]))
     myresult = mycursor.fetchall()
-    for x in range(len(myresult)):
+    for x in range(0, len(myresult)):
         if x < (len(myresult) - 1):
             print(myresult[x][0], end=", ")
         else:
-            print(myresult[x][0])
+            print(myresult[x][0], end="")
+    print()
