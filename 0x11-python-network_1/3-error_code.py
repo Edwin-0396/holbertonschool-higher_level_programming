@@ -3,7 +3,6 @@
 URL and displays the body of the response"""
 
 if __name__ == "__main__":
-
     import urllib.request
     import sys
 
@@ -14,4 +13,4 @@ if __name__ == "__main__":
             print(html.decode('utf-8'))
 
     except urllib.error.HTTPError as e:
-        print(f"Error code: {e.status}")
+        print("Error code: {}".format(e.status))
