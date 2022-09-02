@@ -8,4 +8,4 @@ if __name__ == "__main__":
     resp = resp.text
     print("Body response:")
     print("\t- type: {}".format(type(resp)))
-    print("\t- content: {resp}".format(resp))
+    print("\t- content: {}".format(resp))
