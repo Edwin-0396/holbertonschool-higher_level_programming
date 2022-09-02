@@ -14,7 +14,7 @@ if __name__ == "__main__":
     try:
         json_dict = r.json()
         if len(json_dict.keys()) > 0:
-            print(f"[{json_dict.get('id')}] {json_dict.get('name')}")
+            print("[{}] {}".format(json_dict.get('id'), json_dict.get('name')))
         else:
             print("No result")
     except Exception:
